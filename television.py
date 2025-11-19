@@ -54,4 +54,7 @@ class Television:
 
     def __str__(self) -> str:
       """ displaying tv values :return: power, channel, and volume changes """
+        if self.__muted:
+            return f"Power = {self.__status}, Channel = {self.__channel}, Volume = {0}"
+
         return f"Power = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}"
